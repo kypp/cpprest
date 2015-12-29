@@ -84,6 +84,7 @@ elseif(UNIX) # This includes OSX
   # This should prevent linking against the system provided 0.9.8y
   set(_OPENSSL_VERSION "")
   find_package(OpenSSL 1.0.0 REQUIRED)
+  add_definitions(-D_NO_ASYNCRTIMP -D_NO_PPLXIMP)
 
   option(BUILD_SHARED_LIBS "Build shared Libraries." ON)
   option(BUILD_TESTS "Build tests." ON)

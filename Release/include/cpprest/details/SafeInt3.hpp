@@ -150,7 +150,8 @@ Please read the leading comments before using the class.
 #endif
 
 #ifndef C_ASSERT
-#define C_ASSERT(e) typedef char __C_ASSERT__[(e)?1:-1]
+// #define C_ASSERT(e) typedef char __C_ASSERT__[(e)?1:-1]
+#define C_ASSERT(e) static_assert((e), "error!")
 #endif
 
 // Let's test some assumptions
